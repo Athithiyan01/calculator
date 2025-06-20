@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Calculator</title>
+  <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/custom.css" />
+</head>
+
+<body class="bg-gradient-purple h-screen w-screen flex items-center justify-center m-0 p-0">
+
+
+  <div class="bg-white rounded-xl shadow-lg p-6 mt-5 border border-gray-200 w-50% max-w-md">
+    <h2 class="text-center text-2xl font-bold mb-4">My Calculator</h2>
+
+    <!-- Display -->
+    <input id="Display" type="text" readonly class="form-control text-end mb-5 bg-gray-100 rounded-md shadow-sm w-full" />
+       <!-- Button Grid -->
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;">
+      <!-- Row 1 -->
+      <button class="btn operator" onclick="clearDisplay()">C</button>
+      <button class="btn operator" onclick="deleteLast()">⌫</button>
+      <button class="btn operator" onclick="setvalue('%')">%</button>
+      <button class="btn operator" onclick="setvalue('÷')">÷</button>
+      
+      <!-- Row 2 -->
+      <button class="btn btn-outline-primary" onclick="setvalue('7')">7</button>
+      <button class="btn btn-outline-primary" onclick="setvalue('8')">8</button>
+      <button class="btn btn-outline-primary" onclick="setvalue('9')">9</button>
+      <button class="btn operator" onclick="setvalue('×')">×</button>
+      
+      <!-- Row 3 -->
+      <button class="btn btn-outline-primary" onclick="setvalue('4')">4</button>
+      <button class="btn btn-outline-primary" onclick="setvalue('5')">5</button>
+      <button class="btn btn-outline-primary" onclick="setvalue('6')">6</button>
+      <button class="btn operator" onclick="setvalue('-')">-</button>
+      
+      <!-- Row 4 -->
+      <button class="btn btn-outline-primary" onclick="setvalue('1')">1</button>
+      <button class="btn btn-outline-primary" onclick="setvalue('2')">2</button>
+      <button class="btn btn-outline-primary" onclick="setvalue('3')">3</button>
+      <button class="btn operator" onclick="setvalue('+')">+</button>
+      
+      <!-- Row 5 -->
+      <button class="btn btn-outline-primary" onclick="setvalue('0')" style="grid-column: span 2;">0</button>
+      <button class="btn btn-outline-primary" onclick="setvalue('.')">.</button>
+      <button class="btn btn-success" onclick="calculate()">=</button>
+    </div>
+  </div>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
